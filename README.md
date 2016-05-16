@@ -1,5 +1,7 @@
 # RecyclerViewHelper    [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper)  [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572)
 
+[![Twitter](https://img.shields.io/badge/Twitter-@nisrulz-blue.svg?style=flat)](http://twitter.com/nisrulz)
+
 RecyclerViewHelper provides the most common functions around recycler view like Swipe
  to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not 
  selected, on-click listener for items.
