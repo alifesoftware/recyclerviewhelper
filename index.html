@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Recyclerviewhelper by nisrulz</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Recyclerviewhelper</h1>
+        <p>Android library that provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/nisrulz/recyclerviewhelper" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/nisrulz/recyclerviewhelper/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/nisrulz/recyclerviewhelper/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a id="recyclerviewhelper------" class="anchor" href="#recyclerviewhelper------" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RecyclerViewHelper    <a href="https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper"><img src="https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper/badge.svg" alt="Maven Central"></a>  <a href="https://android-arsenal.com/details/1/3572"><img src="https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true" alt="Android Arsenal"></a>
+</h1>
+
+<p><a href="http://twitter.com/nisrulz"><img src="https://img.shields.io/badge/Twitter-@nisrulz-blue.svg?style=flat" alt="Twitter"></a></p>
+
+<p>RecyclerViewHelper provides the most common functions around recycler view like Swipe
+ to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not 
+ selected, on-click listener for items.</p>
+
+<h1>
+<a id="integration" class="anchor" href="#integration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Integration</h1>
+
+<ul>
+<li>RecyclerViewHelper is available in the MavenCentral, so getting it as simple as adding it as a dependency</li>
+</ul>
+
+<div class="highlight highlight-source-groovy-gradle"><pre>compile <span class="pl-s"><span class="pl-pds">'</span>com.github.nisrulz:recyclerviewhelper:23.3.0<span class="pl-pds">'</span></span></pre></div>
+
+<blockquote>
+<p>NOTE : The version here corresponds to the version of underlying recyclerview dependency. </p>
+</blockquote>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h1>
+
+<ul>
+<li>Implement the <code>RHVAdapter</code> in your recycler view adapter and <code>RHVViewHolder</code> in your ItemViewHolder </li>
+</ul>
+
+<div class="highlight highlight-source-java"><pre>
+    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">MyAdapter</span> <span class="pl-k">extends</span> <span class="pl-e">RecyclerView</span>.<span class="pl-e">Adapter&lt;<span class="pl-smi">MyAdapter</span>.ItemViewHolder</span>&gt; <span class="pl-k">implements</span> <span class="pl-e">RVHAdapter</span> {
+
+         <span class="pl-c1">...</span>
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">boolean</span> <span class="pl-en">onItemMove</span>(<span class="pl-k">int</span> <span class="pl-v">fromPosition</span>, <span class="pl-k">int</span> <span class="pl-v">toPosition</span>) {
+            swap(fromPosition, toPosition);
+            <span class="pl-k">return</span> <span class="pl-c1">false</span>;
+        }
+
+        <span class="pl-k">@Override</span>
+        <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onItemDismiss</span>(<span class="pl-k">int</span> <span class="pl-v">position</span>, <span class="pl-k">int</span> <span class="pl-v">direction</span>) {
+            remove(position);
+        }
+
+        <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">ItemViewHolder</span> <span class="pl-k">extends</span> <span class="pl-e">RecyclerView</span>.<span class="pl-e">ViewHolder</span> <span class="pl-k">implements</span> <span class="pl-e">RVHViewHolder</span> {
+            <span class="pl-c1">...</span>
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onItemSelected</span>(<span class="pl-k">int</span> <span class="pl-v">actionstate</span>) {
+                <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Item is selected<span class="pl-pds">"</span></span>);
+            }
+
+            <span class="pl-k">@Override</span>
+            <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onItemClear</span>() {
+                <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Item is unselected<span class="pl-pds">"</span></span>);
+
+            }
+        }
+
+        <span class="pl-c">// Helper functions you might want to implement to make changes in the list as an event is fired</span>
+        <span class="pl-k">private</span> <span class="pl-k">void</span> <span class="pl-en">remove</span>(<span class="pl-k">int</span> <span class="pl-v">position</span>) {
+            dataList<span class="pl-k">.</span>remove(position);
+            notifyItemRemoved(position);
+        }
+
+        <span class="pl-k">private</span> <span class="pl-k">void</span> <span class="pl-en">swap</span>(<span class="pl-k">int</span> <span class="pl-v">firstPosition</span>, <span class="pl-k">int</span> <span class="pl-v">secondPosition</span>) {
+            <span class="pl-smi">Collections</span><span class="pl-k">.</span>swap(dataList, firstPosition, secondPosition);
+            notifyItemMoved(firstPosition, secondPosition);
+        }
+    }
+</pre></div>
+
+<ul>
+<li>Then implement your recycler view</li>
+</ul>
+
+<div class="highlight highlight-source-java"><pre>
+   <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">MainActivity</span> <span class="pl-k">extends</span> <span class="pl-e">AppCompatActivity</span> {
+
+
+       <span class="pl-smi">RecyclerView</span> myrecyclerview;
+       <span class="pl-k">ArrayList&lt;<span class="pl-smi">String</span>&gt;</span> data;
+       <span class="pl-smi">MyAdapter</span> adapter;
+
+       <span class="pl-k">@Override</span>
+       <span class="pl-k">protected</span> <span class="pl-k">void</span> <span class="pl-en">onCreate</span>(<span class="pl-smi">Bundle</span> <span class="pl-v">savedInstanceState</span>) {
+           <span class="pl-v">super</span><span class="pl-k">.</span>onCreate(savedInstanceState);
+           setContentView(<span class="pl-smi">R</span><span class="pl-k">.</span>layout<span class="pl-k">.</span>activity_main);
+
+           myrecyclerview <span class="pl-k">=</span> (<span class="pl-smi">RecyclerView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>rv_fruits);
+
+           data <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-k">ArrayList&lt;&gt;</span>();
+           data<span class="pl-k">.</span>add(<span class="pl-s"><span class="pl-pds">"</span>Apple<span class="pl-pds">"</span></span>);
+           <span class="pl-c1">...</span>
+           data<span class="pl-k">.</span>add(<span class="pl-s"><span class="pl-pds">"</span>Fig<span class="pl-pds">"</span></span>);
+
+           <span class="pl-c">// Setup your adapter</span>
+           adapter <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">MyAdapter</span>(data);
+           <span class="pl-c">// Setup </span>
+           myrecyclerview<span class="pl-k">.</span>hasFixedSize();
+           myrecyclerview<span class="pl-k">.</span>setLayoutManager(<span class="pl-k">new</span> <span class="pl-smi">LinearLayoutManager</span>(<span class="pl-v">this</span>));
+           myrecyclerview<span class="pl-k">.</span>setAdapter(adapter);
+
+
+           <span class="pl-c">// Setup onItemTouchHandler to enable drag and drop , swipe left or right</span>
+           <span class="pl-smi">ItemTouchHelper</span><span class="pl-k">.</span><span class="pl-smi">Callback</span> callback <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">RVHItemTouchHelperCallback</span>(adapter, <span class="pl-c1">true</span>, <span class="pl-c1">true</span>,
+                   <span class="pl-c1">true</span>);
+           <span class="pl-smi">ItemTouchHelper</span> helper <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">ItemTouchHelper</span>(callback);
+           helper<span class="pl-k">.</span>attachToRecyclerView(myrecyclerview);
+
+           <span class="pl-c">// Set the divider in the recyclerview</span>
+           myrecyclerview<span class="pl-k">.</span>addItemDecoration(<span class="pl-k">new</span> <span class="pl-smi">RVHItemDividerDecoration</span>(<span class="pl-v">this</span>, <span class="pl-smi">LinearLayoutManager</span><span class="pl-c1"><span class="pl-k">.</span>VERTICAL</span>));
+
+           <span class="pl-c">// Set On Click Listener</span>
+           myrecyclerview<span class="pl-k">.</span>addOnItemTouchListener(<span class="pl-k">new</span> <span class="pl-smi">RVHItemClickListener</span>(<span class="pl-v">this</span>, <span class="pl-k">new</span> <span class="pl-smi">RVHItemClickListener</span>.<span class="pl-smi">OnItemClickListener</span>() {
+               <span class="pl-k">@Override</span>
+               <span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">onItemClick</span>(<span class="pl-smi">View</span> <span class="pl-v">view</span>, <span class="pl-k">int</span> <span class="pl-v">position</span>) {
+                   <span class="pl-smi">String</span> value <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>Clicked Item <span class="pl-pds">"</span></span> <span class="pl-k">+</span> data<span class="pl-k">.</span>get(position) <span class="pl-k">+</span> <span class="pl-s"><span class="pl-pds">"</span> at <span class="pl-pds">"</span></span> <span class="pl-k">+</span> position;
+
+                   <span class="pl-smi">Log</span><span class="pl-k">.</span>d(<span class="pl-s"><span class="pl-pds">"</span>TAG<span class="pl-pds">"</span></span>, value);
+                   <span class="pl-smi">Toast</span><span class="pl-k">.</span>makeText(<span class="pl-smi">MainActivity</span><span class="pl-k">.</span><span class="pl-v">this</span>, value, <span class="pl-smi">Toast</span><span class="pl-c1"><span class="pl-k">.</span>LENGTH_SHORT</span>)<span class="pl-k">.</span>show();
+               }
+           }));
+
+       }
+   }
+
+</pre></div>
+
+<h2></h2>
+
+<p>Special Credits to Paul Burke and his <a href="https://medium%0A.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf#.bk2e4q81b">article</a> which got me thinking </p>
+
+<p>This library contains a modified version of his implementations of ItemTouchHelper.</p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
+
+<pre><code>Copyright 2016 Nishant Srivastava
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/nisrulz">nisrulz</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
