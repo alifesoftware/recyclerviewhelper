@@ -1,6 +1,10 @@
-# RecyclerViewHelper
+![Image](https://github.com/nisrulz/recyclerviewhelper/blob/master/img/github_banner.png)
 
-[![MavenCentral](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper)  [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572) [![Twitter](https://img.shields.io/badge/Twitter-@nisrulz-blue.svg?style=flat)](http://twitter.com/nisrulz)
+[![MavenCentral](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper) [![API](https://img.shields.io/badge/API-9%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=9)
+
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572)
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
 
 RecyclerViewHelper provides the most common functions around recycler view like Swipe
  to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not 
@@ -9,7 +13,7 @@ RecyclerViewHelper provides the most common functions around recycler view like 
 #Integration
 - RecyclerViewHelper is available in the MavenCentral, so getting it as simple as adding it as a dependency
 ```gradle
-compile 'com.github.nisrulz:recyclerviewhelper:23.3.0'
+compile 'com.github.nisrulz:recyclerviewhelper:23.4.0'
 ```
 > NOTE : The version here corresponds to the version of underlying recyclerview dependency. 
 
@@ -119,10 +123,23 @@ compile 'com.github.nisrulz:recyclerviewhelper:23.3.0'
 
 --
 
-Special Credits to Paul Burke and his [article](https://medium
-.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf#.bk2e4q81b) which got me thinking 
+# Pull Requests
+I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
+  1. Match coding style (braces, spacing, etc.) This is best achieved using CMD+Option+L (Reformat code) on Mac (not sure for Windows) with Android Studio defaults.
+  2. If its a feature, bugfix, or anything please only change code to what you specify.
+  3. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
+  4. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
+  5. Check for existing [issues](https://github.com/nisrulz/qreader/issues) first, before filing an issue.  
+  6. Have fun!
 
-This library contains a modified version of his implementations of ItemTouchHelper.
+### Created & Maintained By
+[Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
+
+>Special Credits to Paul Burke and his [article](https://medium
+.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf#.bk2e4q81b) which got me thinking 
+>
+>This library contains a modified version of his implementations of ItemTouchHelper.
+
 
 License
 =======
