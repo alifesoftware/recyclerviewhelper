@@ -74,5 +74,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
 
+        // Show Toast
+        Toast.makeText(MainActivity.this, "Swipe items left/right\nLong press and drag and drop",
+            Toast.LENGTH_LONG).show();
+
     }
 }

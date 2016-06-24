@@ -14,95 +14,91 @@ import static android.support.v7.widget.helper.ItemTouchHelper.UP;
 
 public class RVHItemTouchHelperCallback extends Callback {
 
-    private final RVHAdapter mAdapter;
-    private final boolean isLongPressDragEnabled;
-    private final boolean isItemViewSwipeEnabledLeft;
-    private final boolean isItemViewSwipeEnabledRight;
+  private final RVHAdapter mAdapter;
+  private final boolean isLongPressDragEnabled;
+  private final boolean isItemViewSwipeEnabledLeft;
+  private final boolean isItemViewSwipeEnabledRight;
 
-    public RVHItemTouchHelperCallback(RVHAdapter adapter, boolean
-            isLongPressDragEnabled, boolean isItemViewSwipeEnabledLeft, boolean
-                                              isItemViewSwipeEnabledRight) {
-        mAdapter = adapter;
-        this.isItemViewSwipeEnabledLeft = isItemViewSwipeEnabledLeft;
-        this.isItemViewSwipeEnabledRight = isItemViewSwipeEnabledRight;
-        this.isLongPressDragEnabled = isLongPressDragEnabled;
+  public RVHItemTouchHelperCallback(RVHAdapter adapter, boolean isLongPressDragEnabled,
+      boolean isItemViewSwipeEnabledLeft, boolean isItemViewSwipeEnabledRight) {
+    mAdapter = adapter;
+    this.isItemViewSwipeEnabledLeft = isItemViewSwipeEnabledLeft;
+    this.isItemViewSwipeEnabledRight = isItemViewSwipeEnabledRight;
+    this.isLongPressDragEnabled = isLongPressDragEnabled;
+  }
+
+  @Override public boolean isLongPressDragEnabled() {
+    return isLongPressDragEnabled;
+  }
+
+  @Override public boolean isItemViewSwipeEnabled() {
+    return (isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight);
+  }
+
+  @Override
+  public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+    final int dragFlags = UP | DOWN;
+    final int swipeFlags;
+    if (isItemViewSwipeEnabledLeft && isItemViewSwipeEnabledRight) {
+      swipeFlags = START | END;
+    } else if (isItemViewSwipeEnabledRight) {
+      swipeFlags = START;
+    } else {
+      swipeFlags = END;
     }
 
-    @Override
-    public boolean isLongPressDragEnabled() {
-        return isLongPressDragEnabled;
+    return Callback.makeMovementFlags(dragFlags, swipeFlags);
+  }
+
+  @Override public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source,
+      RecyclerView.ViewHolder target) {
+    // Notify the adapter of the move
+    mAdapter.onItemMove(source.getAdapterPosition(), target.getAdapterPosition());
+    return true;
+  }
+
+  @Override public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+    mAdapter.onItemDismiss(viewHolder.getAdapterPosition(), direction);
+  }
+
+  @Override
+  public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder,
+      float dX, float dY, int actionState, boolean isCurrentlyActive) {
+    if (actionState == ACTION_STATE_SWIPE) {
+      // Fade out the view as it is swiped out of the parent's bounds
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        viewHolder.itemView.setTranslationX(dX);
+      }
+    } else {
+      super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+    }
+  }
+
+  @Override public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
+    // We only want the active item to change
+    if (actionState != ACTION_STATE_IDLE) {
+      if (viewHolder instanceof RVHViewHolder) {
+        // Let the view holder know that this item is being moved or dragged
+        RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
+        itemViewHolder.onItemSelected(actionState);
+      }
     }
 
-    @Override
-    public boolean isItemViewSwipeEnabled() {
-        return (isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight);
+    super.onSelectedChanged(viewHolder, actionState);
+  }
+
+  @Override public boolean canDropOver(RecyclerView recyclerView, RecyclerView.ViewHolder current,
+      RecyclerView.ViewHolder target) {
+    return current.getItemViewType() == target.getItemViewType();
+  }
+
+  @Override public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+    super.clearView(recyclerView, viewHolder);
+
+    if (viewHolder instanceof RVHViewHolder) {
+      // Tell the view holder it's time to restore the idle state
+      RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
+      itemViewHolder.onItemClear();
     }
-
-    @Override
-    public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-        final int dragFlags = UP | DOWN;
-        final int swipeFlags;
-        if (isItemViewSwipeEnabledLeft && isItemViewSwipeEnabledRight)
-            swipeFlags = START | END;
-        else if (isItemViewSwipeEnabledRight)
-            swipeFlags = START;
-        else
-            swipeFlags = END;
-
-        return Callback.makeMovementFlags(dragFlags, swipeFlags);
-    }
-
-    @Override
-    public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source, RecyclerView.ViewHolder target) {
-        if (source.getItemViewType() != target.getItemViewType()) {
-            return false;
-        }
-
-        // Notify the adapter of the move
-        mAdapter.onItemMove(source.getAdapterPosition(), target.getAdapterPosition());
-        return true;
-    }
-
-    @Override
-    public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-        mAdapter.onItemDismiss(viewHolder.getAdapterPosition(), direction);
-    }
-
-
-    @Override
-    public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
-        if (actionState == ACTION_STATE_SWIPE) {
-            // Fade out the view as it is swiped out of the parent's bounds
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-                viewHolder.itemView.setTranslationX(dX);
-            }
-        } else {
-            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
-        }
-    }
-
-    @Override
-    public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
-        // We only want the active item to change
-        if (actionState != ACTION_STATE_IDLE) {
-            if (viewHolder instanceof RVHViewHolder) {
-                // Let the view holder know that this item is being moved or dragged
-                RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
-                itemViewHolder.onItemSelected(actionState);
-            }
-        }
-
-        super.onSelectedChanged(viewHolder, actionState);
-    }
-
-    @Override
-    public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-        super.clearView(recyclerView, viewHolder);
-
-        if (viewHolder instanceof RVHViewHolder) {
-            // Tell the view holder it's time to restore the idle state
-            RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
-            itemViewHolder.onItemClear();
-        }
-    }
+  }
 }
