@@ -1,10 +1,15 @@
 ![Image](https://github.com/nisrulz/recyclerviewhelper/blob/master/img/github_banner.png)
 
+
+### Specs
 [![MavenCentral](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.nisrulz/recyclerviewhelper) [![API](https://img.shields.io/badge/API-9%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=9)
 
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572)
+### Featured in
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-Issue%20%3A%2023%20July%2C%2016-blue.svg)](http://us2.campaign-archive1.com/?u=869610fc59cf83e08b6e0635a&id=b123cc7fb0&e=abe3a482d3)
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)
+### Show some :heart:
+[![GitHub stars](https://img.shields.io/github/stars/nisrulz/recyclerviewhelper.svg?style=social&label=Star)](https://github.com/nisrulz/recyclerviewhelper) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/recyclerviewhelper.svg?style=social&label=Fork)](https://github.com/nisrulz/recyclerviewhelper/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/recyclerviewhelper.svg?style=social&label=Watch)](https://github.com/nisrulz/recyclerviewhelper) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/recyclerviewhelper)  
+[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz) 
 
 RecyclerViewHelper provides the most common functions around recycler view like Swipe
  to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not 
@@ -13,7 +18,7 @@ RecyclerViewHelper provides the most common functions around recycler view like 
 #Integration
 - RecyclerViewHelper is available in the MavenCentral, so getting it as simple as adding it as a dependency
 ```gradle
-compile 'com.github.nisrulz:recyclerviewhelper:23.4.0'
+compile 'com.github.nisrulz:recyclerviewhelper:24.0.0'
 ```
 > NOTE : The version here corresponds to the version of underlying recyclerview dependency. 
 
