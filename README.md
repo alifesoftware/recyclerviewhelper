@@ -18,7 +18,7 @@ RecyclerViewHelper provides the most common functions around recycler view like 
 #Integration
 - RecyclerViewHelper is available in the MavenCentral, so getting it as simple as adding it as a dependency
 ```gradle
-compile 'com.github.nisrulz:recyclerviewhelper:24.0.0'
+compile 'com.github.nisrulz:recyclerviewhelper:24.1.1'
 ```
 > NOTE : The version here corresponds to the version of underlying recyclerview dependency. 
 
