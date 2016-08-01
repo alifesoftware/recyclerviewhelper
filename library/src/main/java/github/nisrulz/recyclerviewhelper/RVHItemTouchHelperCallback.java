@@ -12,6 +12,9 @@ import static android.support.v7.widget.helper.ItemTouchHelper.END;
 import static android.support.v7.widget.helper.ItemTouchHelper.START;
 import static android.support.v7.widget.helper.ItemTouchHelper.UP;
 
+/**
+ * The type Rvh item touch helper callback.
+ */
 public class RVHItemTouchHelperCallback extends Callback {
 
   private final RVHAdapter mAdapter;
@@ -19,6 +22,14 @@ public class RVHItemTouchHelperCallback extends Callback {
   private final boolean isItemViewSwipeEnabledLeft;
   private final boolean isItemViewSwipeEnabledRight;
 
+  /**
+   * Instantiates a new Rvh item touch helper callback.
+   *
+   * @param adapter the adapter
+   * @param isLongPressDragEnabled the is long press drag enabled
+   * @param isItemViewSwipeEnabledLeft the is item view swipe enabled left
+   * @param isItemViewSwipeEnabledRight the is item view swipe enabled right
+   */
   public RVHItemTouchHelperCallback(RVHAdapter adapter, boolean isLongPressDragEnabled,
       boolean isItemViewSwipeEnabledLeft, boolean isItemViewSwipeEnabledRight) {
     mAdapter = adapter;
@@ -32,7 +43,7 @@ public class RVHItemTouchHelperCallback extends Callback {
   }
 
   @Override public boolean isItemViewSwipeEnabled() {
-    return (isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight);
+    return isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight;
   }
 
   @Override
@@ -76,12 +87,10 @@ public class RVHItemTouchHelperCallback extends Callback {
 
   @Override public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
     // We only want the active item to change
-    if (actionState != ACTION_STATE_IDLE) {
-      if (viewHolder instanceof RVHViewHolder) {
-        // Let the view holder know that this item is being moved or dragged
-        RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
-        itemViewHolder.onItemSelected(actionState);
-      }
+    if (actionState != ACTION_STATE_IDLE && viewHolder instanceof RVHViewHolder) {
+      // Let the view holder know that this item is being moved or dragged
+      RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
+      itemViewHolder.onItemSelected(actionState);
     }
 
     super.onSelectedChanged(viewHolder, actionState);
