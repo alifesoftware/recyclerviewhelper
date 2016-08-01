@@ -140,8 +140,7 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 ### Created & Maintained By
 [Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
 
->Special Credits to Paul Burke and his [article](https://medium
-.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf#.bk2e4q81b) which got me thinking 
+>Special Credits to Paul Burke and his [article](https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf) which got me thinking
 >
 >This library contains a modified version of his implementations of ItemTouchHelper.
 
