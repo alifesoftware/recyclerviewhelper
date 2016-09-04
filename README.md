@@ -5,7 +5,7 @@
 [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion) [![API](https://img.shields.io/badge/API-9%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=9)
 
 ### Featured in
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%2399-blue.svg)](https://www.androiddevdigest.com/digest-99/)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572) [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%2399-blue.svg)](https://www.androiddevdigest.com/digest-99/)
 
 ### Show some :heart:
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/recyclerviewhelper.svg?style=social&label=Star)](https://github.com/nisrulz/recyclerviewhelper) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/recyclerviewhelper.svg?style=social&label=Fork)](https://github.com/nisrulz/recyclerviewhelper/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/recyclerviewhelper.svg?style=social&label=Watch)](https://github.com/nisrulz/recyclerviewhelper) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/recyclerviewhelper)  
