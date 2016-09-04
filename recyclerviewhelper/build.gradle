@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-//apply from: 'https://raw.github.com/nisrulz/gradle-mvn-push/master/gradle-mvn-push.gradle'
 
 android {
   compileSdkVersion 24
@@ -26,3 +25,38 @@ dependencies {
   compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
   compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
 }
+
+
+// Bintray info
+def LIB_MODULE_NAME = 'recyclerviewhelper'
+def LIB_MODULE_DESC = 'RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.'
+
+ext {
+  bintrayRepo = 'maven'
+  bintrayName = LIB_MODULE_NAME // Has to be same as your library module name
+
+  publishedGroupId = GROUP
+  libraryName = LIB_MODULE_NAME
+  artifact = LIB_MODULE_NAME // Has to be same as your library module name
+
+  libraryDescription = LIB_MODULE_DESC
+
+  // Your github repo link
+  siteUrl = POM_URL
+  gitUrl = POM_GIT_URL
+  githubRepository = LIB_GITHUB_REPO
+
+  libraryVersion = VERSION_NAME
+
+  developerId = POM_DEVELOPER_ID
+  developerName = POM_DEVELOPER_NAME
+  developerEmail = POM_DEVELOPER_EMAILID
+
+  licenseName = POM_LICENCE_NAME
+  licenseUrl = POM_LICENCE_URL
+  allLicenses = [POM_ALL_LICENCES]
+}
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'
