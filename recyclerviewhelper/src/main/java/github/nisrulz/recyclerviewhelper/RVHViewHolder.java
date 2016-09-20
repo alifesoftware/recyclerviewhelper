@@ -9,7 +9,8 @@ public interface RVHViewHolder {
    * Called when the ItemTouchHelper first registers an item as being moved or swiped.
    * Implementations should update the item view to indicate it's active state.
    *
-   * @param actionstate the actionstate
+   * @param actionstate
+   *     the actionstate
    */
   void onItemSelected(int actionstate);
 

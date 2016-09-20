@@ -25,10 +25,14 @@ public class RVHItemTouchHelperCallback extends Callback {
   /**
    * Instantiates a new Rvh item touch helper callback.
    *
-   * @param adapter the adapter
-   * @param isLongPressDragEnabled the is long press drag enabled
-   * @param isItemViewSwipeEnabledLeft the is item view swipe enabled left
-   * @param isItemViewSwipeEnabledRight the is item view swipe enabled right
+   * @param adapter
+   *     the adapter
+   * @param isLongPressDragEnabled
+   *     the is long press drag enabled
+   * @param isItemViewSwipeEnabledLeft
+   *     the is item view swipe enabled left
+   * @param isItemViewSwipeEnabledRight
+   *     the is item view swipe enabled right
    */
   public RVHItemTouchHelperCallback(RVHAdapter adapter, boolean isLongPressDragEnabled,
       boolean isItemViewSwipeEnabledLeft, boolean isItemViewSwipeEnabledRight) {
@@ -38,11 +42,13 @@ public class RVHItemTouchHelperCallback extends Callback {
     this.isLongPressDragEnabled = isLongPressDragEnabled;
   }
 
-  @Override public boolean isLongPressDragEnabled() {
+  @Override
+  public boolean isLongPressDragEnabled() {
     return isLongPressDragEnabled;
   }
 
-  @Override public boolean isItemViewSwipeEnabled() {
+  @Override
+  public boolean isItemViewSwipeEnabled() {
     return isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight;
   }
 
@@ -52,23 +58,27 @@ public class RVHItemTouchHelperCallback extends Callback {
     final int swipeFlags;
     if (isItemViewSwipeEnabledLeft && isItemViewSwipeEnabledRight) {
       swipeFlags = START | END;
-    } else if (isItemViewSwipeEnabledRight) {
+    }
+    else if (isItemViewSwipeEnabledRight) {
       swipeFlags = START;
-    } else {
+    }
+    else {
       swipeFlags = END;
     }
 
     return Callback.makeMovementFlags(dragFlags, swipeFlags);
   }
 
-  @Override public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source,
+  @Override
+  public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source,
       RecyclerView.ViewHolder target) {
     // Notify the adapter of the move
     mAdapter.onItemMove(source.getAdapterPosition(), target.getAdapterPosition());
     return true;
   }
 
-  @Override public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+  @Override
+  public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
     mAdapter.onItemDismiss(viewHolder.getAdapterPosition(), direction);
   }
 
@@ -80,12 +90,14 @@ public class RVHItemTouchHelperCallback extends Callback {
       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
         viewHolder.itemView.setTranslationX(dX);
       }
-    } else {
+    }
+    else {
       super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
     }
   }
 
-  @Override public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
+  @Override
+  public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
     // We only want the active item to change
     if (actionState != ACTION_STATE_IDLE && viewHolder instanceof RVHViewHolder) {
       // Let the view holder know that this item is being moved or dragged
@@ -96,12 +108,14 @@ public class RVHItemTouchHelperCallback extends Callback {
     super.onSelectedChanged(viewHolder, actionState);
   }
 
-  @Override public boolean canDropOver(RecyclerView recyclerView, RecyclerView.ViewHolder current,
+  @Override
+  public boolean canDropOver(RecyclerView recyclerView, RecyclerView.ViewHolder current,
       RecyclerView.ViewHolder target) {
     return current.getItemViewType() == target.getItemViewType();
   }
 
-  @Override public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+  @Override
+  public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
     super.clearView(recyclerView, viewHolder);
 
     if (viewHolder instanceof RVHViewHolder) {

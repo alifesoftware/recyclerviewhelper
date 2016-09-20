@@ -19,8 +19,10 @@ public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
     /**
      * On item click.
      *
-     * @param view the view
-     * @param position the position
+     * @param view
+     *     the view
+     * @param position
+     *     the position
      */
     void onItemClick(View view, int position);
   }
@@ -33,19 +35,23 @@ public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
   /**
    * Instantiates a new Rvh item click listener.
    *
-   * @param context the context
-   * @param listener the listener
+   * @param context
+   *     the context
+   * @param listener
+   *     the listener
    */
   public RVHItemClickListener(Context context, OnItemClickListener listener) {
     mListener = listener;
     mGestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
-      @Override public boolean onSingleTapUp(MotionEvent e) {
+      @Override
+      public boolean onSingleTapUp(MotionEvent e) {
         return true;
       }
     });
   }
 
-  @Override public boolean onInterceptTouchEvent(RecyclerView view, MotionEvent e) {
+  @Override
+  public boolean onInterceptTouchEvent(RecyclerView view, MotionEvent e) {
     View childView = view.findChildViewUnder(e.getX(), e.getY());
     if (childView != null && mListener != null && mGestureDetector.onTouchEvent(e)) {
       mListener.onItemClick(childView, view.getChildAdapterPosition(childView));
@@ -54,11 +60,13 @@ public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
     return false;
   }
 
-  @Override public void onTouchEvent(RecyclerView view, MotionEvent motionEvent) {
+  @Override
+  public void onTouchEvent(RecyclerView view, MotionEvent motionEvent) {
     // Do nothing
   }
 
-  @Override public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+  @Override
+  public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
     // Do nothings
   }
 }

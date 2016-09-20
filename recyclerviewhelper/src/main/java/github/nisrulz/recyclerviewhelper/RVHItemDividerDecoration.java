@@ -36,8 +36,10 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
   /**
    * Instantiates a new Rvh item divider decoration.
    *
-   * @param context the context
-   * @param orientation the orientation
+   * @param context
+   *     the context
+   * @param orientation
+   *     the orientation
    */
   public RVHItemDividerDecoration(Context context, int orientation) {
     final TypedArray a = context.obtainStyledAttributes(ATTRS);
@@ -49,7 +51,8 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
   /**
    * Sets orientation.
    *
-   * @param orientation the orientation
+   * @param orientation
+   *     the orientation
    */
   public void setOrientation(int orientation) {
     if (orientation != HORIZONTAL_LIST && orientation != VERTICAL_LIST) {
@@ -58,10 +61,12 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
     mOrientation = orientation;
   }
 
-  @Override public void onDraw(Canvas c, RecyclerView parent) {
+  @Override
+  public void onDraw(Canvas c, RecyclerView parent) {
     if (mOrientation == VERTICAL_LIST) {
       drawVertical(c, parent);
-    } else {
+    }
+    else {
       drawHorizontal(c, parent);
     }
   }
@@ -69,8 +74,10 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
   /**
    * Draw vertical.
    *
-   * @param c the c
-   * @param parent the parent
+   * @param c
+   *     the c
+   * @param parent
+   *     the parent
    */
   public void drawVertical(Canvas c, RecyclerView parent) {
     final int left = parent.getPaddingLeft();
@@ -91,8 +98,10 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
   /**
    * Draw horizontal.
    *
-   * @param c the c
-   * @param parent the parent
+   * @param c
+   *     the c
+   * @param parent
+   *     the parent
    */
   public void drawHorizontal(Canvas c, RecyclerView parent) {
     final int top = parent.getPaddingTop();
@@ -110,10 +119,12 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
     }
   }
 
-  @Override public void getItemOffsets(Rect outRect, int itemPosition, RecyclerView parent) {
+  @Override
+  public void getItemOffsets(Rect outRect, int itemPosition, RecyclerView parent) {
     if (mOrientation == VERTICAL_LIST) {
       outRect.set(0, 0, 0, mDivider.getIntrinsicHeight());
-    } else {
+    }
+    else {
       outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
     }
   }

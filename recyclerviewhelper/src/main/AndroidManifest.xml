@@ -1,11 +1,7 @@
-<manifest package="github.nisrulz.recyclerviewhelper"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="github.nisrulz.recyclerviewhelper">
 
-
-    <application
-        android:allowBackup="true"
-        android:supportsRtl="true">
-    </application>
+  <application>
+  </application>
 
 
 </manifest>
