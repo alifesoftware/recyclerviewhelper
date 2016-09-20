@@ -9,7 +9,6 @@ android {
     targetSdkVersion 24
     versionCode 6
     versionName '24.2.1'
-    archivesBaseName = "recyclerviewHelper-$versionName"
   }
   buildTypes {
     release {
