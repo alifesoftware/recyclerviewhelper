@@ -25,7 +25,6 @@ dependencies {
   compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
 }
 
-
 // Bintray info
 def LIB_MODULE_NAME = 'recyclerviewhelper'
 def LIB_MODULE_DESC = 'RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.'
@@ -59,3 +58,8 @@ ext {
 // Place it at the end of the file
 apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'
+
+
+javadoc {
+  failOnError = false
+}
