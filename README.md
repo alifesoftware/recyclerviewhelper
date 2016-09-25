@@ -18,11 +18,16 @@ RecyclerViewHelper provides the most common functions around recycler view like 
 #Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
+// Required , so make sure your support libs are updated in the android sdk
+compile "com.android.support:appcompat-v7:{latest version}'
+compile "com.android.support:recyclerview-v7:{latest version}'
+
+// RecyclerViewHelper
 compile 'com.github.nisrulz:recyclerviewhelper:{latest version}'
 ```
 where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion)
 
-> NOTE : The version here corresponds to the version of underlying recyclerview dependency. 
+> NOTE : The version here corresponds to the version of recyclerview dependency.
 
 #Usage
 + Implement the `RHVAdapter` in your recycler view adapter and `RHVViewHolder` in your ItemViewHolder 
