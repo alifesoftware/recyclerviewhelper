@@ -10,7 +10,7 @@ import android.view.View;
  * The type Rvh item click listener.
  */
 public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
-  private OnItemClickListener mListener;
+  private final OnItemClickListener mListener;
 
   /**
    * The interface On item click listener.
@@ -30,7 +30,7 @@ public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
   /**
    * The M gesture detector.
    */
-  GestureDetector mGestureDetector;
+  private final GestureDetector mGestureDetector;
 
   /**
    * Instantiates a new Rvh item click listener.

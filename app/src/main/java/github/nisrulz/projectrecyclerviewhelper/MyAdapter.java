@@ -13,7 +13,7 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
     implements RVHAdapter {
 
-  List<String> dataList;
+  private final List<String> dataList;
 
   public MyAdapter(List<String> dataList) {
     this.dataList = dataList;
@@ -45,7 +45,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
   }
 
   public class ItemViewHolder extends RecyclerView.ViewHolder implements RVHViewHolder {
-    TextView txt;
+    final TextView txt;
 
     public ItemViewHolder(View itemView) {
       super(itemView);

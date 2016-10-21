@@ -15,9 +15,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-  RecyclerView myrecyclerview;
-  ArrayList<String> data;
-  MyAdapter adapter;
+  private RecyclerView myrecyclerview;
+  private ArrayList<String> data;
+  private MyAdapter adapter;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
