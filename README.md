@@ -15,7 +15,7 @@ RecyclerViewHelper provides the most common functions around recycler view like 
  to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not 
  selected, on-click listener for items.
 
-![Walkthrough](https://github.com/nisrulz/recyclerviewhelper/blob/develop/img/walkthrough.gif)
+![Walkthrough](https://github.com/nisrulz/recyclerviewhelper/blob/develop/img/walkthrough1.gif)
 
 #Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
