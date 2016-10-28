@@ -2,13 +2,13 @@ apply plugin: 'com.android.library'
 
 android {
   compileSdkVersion 25
-  buildToolsVersion "24.0.3"
+  buildToolsVersion "25.0.0"
 
   defaultConfig {
     minSdkVersion 9
     targetSdkVersion 25
-    versionCode 7
-    versionName '25.0.0'
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
   }
   buildTypes {
     release {
@@ -40,11 +40,11 @@ ext {
   libraryDescription = LIB_MODULE_DESC
 
   // Your github repo link
-  siteUrl = POM_URL
-  gitUrl = POM_GIT_URL
-  githubRepository = LIB_GITHUB_REPO
+  siteUrl = rootProject.ext.pomUrl
+  gitUrl = rootProject.ext.pomGitUrl
+  githubRepository = rootProject.ext.libGithubRepo
 
-  libraryVersion = VERSION_NAME
+  libraryVersion = rootProject.ext.versionName
 
   developerId = POM_DEVELOPER_ID
   developerName = POM_DEVELOPER_NAME

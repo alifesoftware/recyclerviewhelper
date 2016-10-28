@@ -27,5 +27,13 @@ task clean(type: Delete) {
 }
 
 ext {
+  //Other
   supportLibVersion = '25.0.0'
+
+  // RecyclerViewHelper
+  versionCode = 7
+  versionName = '25.0.0'
+  pomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
+  pomGitUrl = 'https://github.com/nisrulz/recyclerviewhelper.git'
+  libGithubRepo = 'nisrulz/recyclerviewhelper'
 }
