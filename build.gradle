@@ -26,14 +26,23 @@ task clean(type: Delete) {
   delete rootProject.buildDir
 }
 
+// Library Info
 ext {
   //Other
   supportLibVersion = '25.0.0'
 
+  //Configs
+  publishLibrary = false
+
   // RecyclerViewHelper
-  versionCode = 7
-  versionName = '25.0.0'
-  pomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
-  pomGitUrl = 'https://github.com/nisrulz/recyclerviewhelper.git'
+  libVersionCode = 7
+  libVersionName = '25.0.0'
+  libPomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
   libGithubRepo = 'nisrulz/recyclerviewhelper'
+
+
+  libModuleName = 'recyclerviewhelper'
+  libModuleDesc =
+      'RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.'
+  libBintrayName = 'com.github.nisrulz:recyclerviewhelper'
 }

@@ -7,8 +7,8 @@ android {
   defaultConfig {
     minSdkVersion 9
     targetSdkVersion 25
-    versionCode rootProject.ext.versionCode
-    versionName rootProject.ext.versionName
+    versionCode rootProject.ext.libVersionCode
+    versionName rootProject.ext.libVersionName
   }
   buildTypes {
     release {
@@ -25,41 +25,40 @@ dependencies {
   provided "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
 }
 
-// Bintray info
-def LIB_MODULE_NAME = 'recyclerviewhelper'
-def LIB_MODULE_DESC = 'RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.'
+if (rootProject.ext.publishLibrary) {
+  // Bintray Params
+  ext {
+    bintrayRepo = 'maven'
+    bintrayName = rootProject.ext.libBintrayName
 
-ext {
-  bintrayRepo = 'maven'
-  bintrayName = 'com.github.nisrulz:recyclerviewhelper'
+    publishedGroupId = GROUP
+    libraryName = rootProject.ext.libModuleName
+    artifact = rootProject.ext.libModuleName // Has to be same as your library module name
 
-  publishedGroupId = GROUP
-  libraryName = LIB_MODULE_NAME
-  artifact = LIB_MODULE_NAME // Has to be same as your library module name
+    libraryDescription = rootProject.ext.libModuleDesc
 
-  libraryDescription = LIB_MODULE_DESC
+    // Your github repo link
+    siteUrl = rootProject.ext.libPomUrl
+    gitUrl = rootProject.ext.libPomUrl + '.git'
+    githubRepository = rootProject.ext.libGithubRepo
 
-  // Your github repo link
-  siteUrl = rootProject.ext.pomUrl
-  gitUrl = rootProject.ext.pomGitUrl
-  githubRepository = rootProject.ext.libGithubRepo
+    libraryVersion = rootProject.ext.libVersionName
 
-  libraryVersion = rootProject.ext.versionName
+    developerId = POM_DEVELOPER_ID
+    developerName = POM_DEVELOPER_NAME
+    developerEmail = POM_DEVELOPER_EMAILID
 
-  developerId = POM_DEVELOPER_ID
-  developerName = POM_DEVELOPER_NAME
-  developerEmail = POM_DEVELOPER_EMAILID
+    licenseName = POM_LICENCE_NAME
+    licenseUrl = POM_LICENCE_URL
+    allLicenses = [POM_ALL_LICENCES]
+  }
 
-  licenseName = POM_LICENCE_NAME
-  licenseUrl = POM_LICENCE_URL
-  allLicenses = [POM_ALL_LICENCES]
-}
-
-// Place it at the end of the file
-apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'
+  // Place it at the end of the file
+  apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
+  apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'
 
 
-javadoc {
-  failOnError = false
+  javadoc {
+    failOnError = false
+  }
 }
