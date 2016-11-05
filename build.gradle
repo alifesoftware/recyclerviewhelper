@@ -31,9 +31,6 @@ ext {
   //Other
   supportLibVersion = '25.0.0'
 
-  //Configs
-  publishLibrary = false
-
   // RecyclerViewHelper
   libVersionCode = 7
   libVersionName = '25.0.0'

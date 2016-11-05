@@ -25,7 +25,7 @@ dependencies {
   provided "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
 }
 
-if (rootProject.ext.publishLibrary) {
+if (project.hasProperty('publish') && project.getProperty('publish')) {
   // Bintray Params
   ext {
     bintrayRepo = 'maven'
