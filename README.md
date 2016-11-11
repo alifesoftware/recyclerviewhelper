@@ -1,4 +1,4 @@
-![Image](https://github.com/nisrulz/recyclerviewhelper/blob/master/img/github_banner.png)
+![Image](/img/github_banner.png)
 
 
 ### Specs
@@ -157,6 +157,10 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 >This library contains a modified version of his implementations of ItemTouchHelper.
 
 
+> If you found this library helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
+>
+> <a href='https://ko-fi.com/A443EQ6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=f' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 License
 =======
 
@@ -173,3 +177,4 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
