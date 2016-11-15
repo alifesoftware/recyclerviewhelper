@@ -29,11 +29,11 @@ task clean(type: Delete) {
 // Library Info
 ext {
   //Other
-  supportLibVersion = '25.0.0'
+  supportLibVersion = '25.0.1'
 
   // RecyclerViewHelper
-  libVersionCode = 7
-  libVersionName = '25.0.0'
+  libVersionCode = 8
+  libVersionName = '25.0.1'
   libPomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
   libGithubRepo = 'nisrulz/recyclerviewhelper'
 
