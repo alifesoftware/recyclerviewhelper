@@ -5,7 +5,7 @@ buildscript {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.3.0'
+    classpath 'com.android.tools.build:gradle:2.3.1'
 
     // NOTE: Do not place your application dependencies here; they belong
     // in the individual module build.gradle files
@@ -29,11 +29,11 @@ task clean(type: Delete) {
 // Library Info
 ext {
   //Other
-  supportLibVersion = '25.3.0'
+  supportLibVersion = '25.3.1'
 
   // RecyclerViewHelper
-  libVersionCode = 11
-  libVersionName = '25.3.0'
+  libVersionCode = 12
+  libVersionName = '25.3.1'
   libPomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
   libGithubRepo = 'nisrulz/recyclerviewhelper'
 
