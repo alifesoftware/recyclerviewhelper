@@ -27,22 +27,6 @@ import android.view.View;
  */
 public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
   private final OnItemClickListener mListener;
-
-  /**
-   * The interface On item click listener.
-   */
-  public interface OnItemClickListener {
-    /**
-     * On item click.
-     *
-     * @param view
-     *     the view
-     * @param position
-     *     the position
-     */
-    void onItemClick(View view, int position);
-  }
-
   /**
    * The M gesture detector.
    */
@@ -84,5 +68,20 @@ public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
   @Override
   public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
     // Do nothings
+  }
+
+  /**
+   * The interface On item click listener.
+   */
+  public interface OnItemClickListener {
+    /**
+     * On item click.
+     *
+     * @param view
+     *     the view
+     * @param position
+     *     the position
+     */
+    void onItemClick(View view, int position);
   }
 }

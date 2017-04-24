@@ -59,16 +59,6 @@ public class RVHItemTouchHelperCallback extends Callback {
   }
 
   @Override
-  public boolean isLongPressDragEnabled() {
-    return isLongPressDragEnabled;
-  }
-
-  @Override
-  public boolean isItemViewSwipeEnabled() {
-    return isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight;
-  }
-
-  @Override
   public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
     final int dragFlags = UP | DOWN;
     final int swipeFlags;
@@ -86,6 +76,12 @@ public class RVHItemTouchHelperCallback extends Callback {
   }
 
   @Override
+  public boolean canDropOver(RecyclerView recyclerView, RecyclerView.ViewHolder current,
+      RecyclerView.ViewHolder target) {
+    return current.getItemViewType() == target.getItemViewType();
+  }
+
+  @Override
   public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder source,
       RecyclerView.ViewHolder target) {
     // Notify the adapter of the move
@@ -94,22 +90,18 @@ public class RVHItemTouchHelperCallback extends Callback {
   }
 
   @Override
-  public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-    mAdapter.onItemDismiss(viewHolder.getAdapterPosition(), direction);
+  public boolean isLongPressDragEnabled() {
+    return isLongPressDragEnabled;
   }
 
   @Override
-  public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder,
-      float dX, float dY, int actionState, boolean isCurrentlyActive) {
-    if (actionState == ACTION_STATE_SWIPE) {
-      // Fade out the view as it is swiped out of the parent's bounds
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-        viewHolder.itemView.setTranslationX(dX);
-      }
-    }
-    else {
-      super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
-    }
+  public boolean isItemViewSwipeEnabled() {
+    return isItemViewSwipeEnabledLeft || isItemViewSwipeEnabledRight;
+  }
+
+  @Override
+  public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+    mAdapter.onItemDismiss(viewHolder.getAdapterPosition(), direction);
   }
 
   @Override
@@ -125,12 +117,6 @@ public class RVHItemTouchHelperCallback extends Callback {
   }
 
   @Override
-  public boolean canDropOver(RecyclerView recyclerView, RecyclerView.ViewHolder current,
-      RecyclerView.ViewHolder target) {
-    return current.getItemViewType() == target.getItemViewType();
-  }
-
-  @Override
   public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
     super.clearView(recyclerView, viewHolder);
 
@@ -138,6 +124,20 @@ public class RVHItemTouchHelperCallback extends Callback {
       // Tell the view holder it's time to restore the idle state
       RVHViewHolder itemViewHolder = (RVHViewHolder) viewHolder;
       itemViewHolder.onItemClear();
+    }
+  }
+
+  @Override
+  public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder,
+      float dX, float dY, int actionState, boolean isCurrentlyActive) {
+    if (actionState == ACTION_STATE_SWIPE) {
+      // Fade out the view as it is swiped out of the parent's bounds
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        viewHolder.itemView.setTranslationX(dX);
+      }
+    }
+    else {
+      super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
     }
   }
 }

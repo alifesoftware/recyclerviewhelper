@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
   private ArrayList<String> data;
   private MyAdapter adapter;
 
-  @Override protected void onCreate(Bundle savedInstanceState) {
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
@@ -77,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
     // Set On Click
     myrecyclerview.addOnItemTouchListener(
         new RVHItemClickListener(this, new RVHItemClickListener.OnItemClickListener() {
-          @Override public void onItemClick(View view, int position) {
+          @Override
+          public void onItemClick(View view, int position) {
             String value = "Clicked Item " + data.get(position) + " at " + position;
 
             Log.d("TAG", value);
