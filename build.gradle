@@ -35,6 +35,11 @@ buildscript {
 allprojects {
   repositories {
     jcenter()
+
+    maven {
+      url 'https://maven.google.com'
+      // Alternative URL is 'https://dl.google.com/dl/android/maven2/'
+    }
   }
 }
 
@@ -45,11 +50,11 @@ task clean(type: Delete) {
 // Library Info
 ext {
   //Other
-  supportLibVersion = '25.3.1'
+  supportLibVersion = '25.4.0'
 
   // RecyclerViewHelper
-  libVersionCode = 12
-  libVersionName = '25.3.1'
+  libVersionCode = 13
+  libVersionName = '25.4.0'
   libPomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
   libGithubRepo = 'nisrulz/recyclerviewhelper'
 
