@@ -22,7 +22,7 @@ android {
 
   defaultConfig {
     minSdkVersion 14
-    targetSdkVersion 26
+    targetSdkVersion 25
     versionCode rootProject.ext.libVersionCode
     versionName rootProject.ext.libVersionName
   }
