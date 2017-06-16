@@ -33,6 +33,21 @@ where `{latest version}` corresponds to published version in [ ![Download](https
 
 > NOTE : The version here corresponds to the version of recyclerview dependency.
 
+##### Make sure that the google's maven repo is declared in your projects `build.gradle` file as below
+
+  ```gradle
+  allprojects {
+    repositories {
+      jcenter()
+
+      maven {
+        url 'https://maven.google.com'
+        // Alternative URL is 'https://dl.google.com/dl/android/maven2/'
+      }
+    }
+  }
+  ```
+
 #Usage
 + Implement the `RHVAdapter` in your recycler view adapter and `RHVViewHolder` in your ItemViewHolder 
 ```java
