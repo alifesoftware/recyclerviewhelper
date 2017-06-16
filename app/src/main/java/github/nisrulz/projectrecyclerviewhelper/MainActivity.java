@@ -31,16 +31,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-  private RecyclerView myrecyclerview;
   private ArrayList<String> data;
-  private MyAdapter adapter;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    myrecyclerview = (RecyclerView) findViewById(R.id.rv_fruits);
+    RecyclerView myrecyclerview = (RecyclerView) findViewById(R.id.rv_fruits);
 
     data = new ArrayList<>();
     data.add("Apple");
@@ -61,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     data.add("Date");
     data.add("Fig");
 
-    adapter = new MyAdapter(data);
+    MyAdapter adapter = new MyAdapter(data);
     myrecyclerview.hasFixedSize();
     myrecyclerview.setLayoutManager(new LinearLayoutManager(this));
     myrecyclerview.setAdapter(adapter);

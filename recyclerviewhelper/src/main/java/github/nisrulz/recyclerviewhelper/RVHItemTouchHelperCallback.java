@@ -17,7 +17,6 @@
 package github.nisrulz.recyclerviewhelper;
 
 import android.graphics.Canvas;
-import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 
 import static android.support.v7.widget.helper.ItemTouchHelper.ACTION_STATE_IDLE;
@@ -132,9 +131,7 @@ public class RVHItemTouchHelperCallback extends Callback {
       float dX, float dY, int actionState, boolean isCurrentlyActive) {
     if (actionState == ACTION_STATE_SWIPE) {
       // Fade out the view as it is swiped out of the parent's bounds
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-        viewHolder.itemView.setTranslationX(dX);
-      }
+      viewHolder.itemView.setTranslationX(dX);
     }
     else {
       super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
