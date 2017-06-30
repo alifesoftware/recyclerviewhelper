@@ -47,12 +47,18 @@ task clean(type: Delete) {
   delete rootProject.buildDir
 }
 
-// Library Info
+
 ext {
   //Other
+
+  targetSdkVersion = 26
+  minSdkVersion = 14
+  compileSdkVersion = targetSdkVersion
+  buildToolsVersion = '26.0.0-rc2'
+  supportLibVersion = '26.0.0-beta2'
   supportLibVersion = '25.4.0'
 
-  // RecyclerViewHelper
+  // Library Info
   libVersionCode = 13
   libVersionName = '25.4.0'
   libPomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
