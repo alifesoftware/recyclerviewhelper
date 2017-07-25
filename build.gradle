@@ -54,13 +54,12 @@ ext {
   targetSdkVersion = 26
   minSdkVersion = 14
   compileSdkVersion = targetSdkVersion
-  buildToolsVersion = '26.0.0-rc2'
-  supportLibVersion = '26.0.0-beta2'
-  supportLibVersion = '25.4.0'
+  buildToolsVersion = '26.0.0'
+  supportLibVersion = '26.0.0'
 
   // Library Info
-  libVersionCode = 13
-  libVersionName = '25.4.0'
+  libVersionCode = 14
+  libVersionName = '26.0.0'
   libPomUrl = 'https://github.com/nisrulz/recyclerviewhelper'
   libGithubRepo = 'nisrulz/recyclerviewhelper'
 
