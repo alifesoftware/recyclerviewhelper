@@ -80,7 +80,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
 
     public ItemViewHolder(View itemView) {
       super(itemView);
-      txt = (TextView) itemView.findViewById(R.id.txt);
+      txt = itemView.findViewById(R.id.txt);
     }
 
     @Override

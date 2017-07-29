@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    RecyclerView myrecyclerview = (RecyclerView) findViewById(R.id.rv_fruits);
+    RecyclerView myrecyclerview = findViewById(R.id.rv_fruits);
 
     data = new ArrayList<>();
     data.add("Apple");
