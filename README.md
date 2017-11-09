@@ -1,25 +1,86 @@
-![Image](/img/github_banner.png)
+<div align="center">
+  <img src="img/github_banner.png" />
+</div>
+<h1 align="center"><a href="https://twitter.com/intent/tweet?text=Checkout%20RecyclerViewHelper%3A%20Android%20lib%20with%20that%20gives%20powers%20to%20recyclerview%20%F0%9F%98%8E&url=https://github.com/nisrulz/recyclerviewhelper&via=nisrulz&hashtags=AndroidDev">
+        <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"/>
+    </a></h1>
 
-### Specs
-[ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion) [![API](https://img.shields.io/badge/API-14%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=14)
+<div align="center">
+  <strong>Android library that provides most common functions around recycler-view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.</strong>
+</div>
+<br/>
+<div align="center">
+    <!-- Bintray -->
+    <a href="https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion">
+        <img src="https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg"/>
+    </a>
+    <!-- API -->
+    <a href="https://android-arsenal.com/api?level=14">
+        <img src="https://img.shields.io/badge/API-14%2B-orange.svg?style=flat"/>
+    </a>
+    <!-- Android Arsenal -->
+    <a href="https://android-arsenal.com/details/1/3572">
+        <img src="https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true"/>
+    </a>
+     <!-- Android Dev Digest -->
+    <a href="https://www.androiddevdigest.com/digest-99/">
+        <img src="https://img.shields.io/badge/AndroidDev%20Digest-%2399-blue.svg"/>
+    </a>
+      <!-- Android Weekly -->
+    <a href="http://androidweekly.net/issues/issue-221">
+        <img src="https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg"/>
+    </a>
+    <!-- GitHub stars -->
+    <a href="https://github.com/nisrulz/recyclerviewhelper">
+        <img src="https://img.shields.io/github/stars/nisrulz/recyclerviewhelper.svg?style=social&label=Star"/>
+    </a>
+    <!-- GitHub forks -->
+    <a href="https://github.com/nisrulz/recyclerviewhelper/fork">
+        <img src="hhttps://img.shields.io/github/forks/nisrulz/recyclerviewhelper.svg?style=social&label=Fork"/>
+    </a>
+    <!-- GitHub watchers -->
+    <a href="https://github.com/nisrulz/recyclerviewhelper">
+        <img src="https://img.shields.io/github/watchers/nisrulz/recyclerviewhelper.svg?style=social&label=Watch"/>
+    </a>
+    <!-- Say Thanks! -->
+    <a href="https://saythanks.io/to/nisrulz">
+        <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg"/>
+    </a>
+    <a href="https://www.paypal.me/nisrulz/5">
+        <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+    </a>
+    <br/>
+     <!-- GitHub followers -->
+    <a href="https://github.com/nisrulz/recyclerviewhelper">
+        <img src="https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow%20@nisrulz"/>
+    </a>
+    <!-- Twitter Follow -->
+    <a href="https://twitter.com/nisrulz">
+        <img src="https://img.shields.io/twitter/follow/nisrulz.svg?style=social"/>
+    </a>
+</div>
 
-### Badges/Featured In
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-RecyclerViewHelper-green.svg?style=true)](https://android-arsenal.com/details/1/3572) [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%2399-blue.svg)](https://www.androiddevdigest.com/digest-99/)
+<div align="center">
+    <a href="https://android.libhunt.com/newsletter/21">
+        Also featured in Awesome Android Newsletter #Issue 21
+    </a>
+</div>
 
-**Also included in**
-+ [Awesome Android Newsletter #Issue 21](https://android.libhunt.com/newsletter/21)
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://twitter.com/nisrulz">Nishant Srivastava</a> and
+  <a href="https://github.com/nisrulz/recyclerviewhelper/graphs/contributors">
+    contributors
+  </a>
+</div>
+<br/>
+<br/>
 
-### Show some :heart:
-[![GitHub stars](https://img.shields.io/github/stars/nisrulz/recyclerviewhelper.svg?style=social&label=Star)](https://github.com/nisrulz/recyclerviewhelper) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/recyclerviewhelper.svg?style=social&label=Fork)](https://github.com/nisrulz/recyclerviewhelper/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/recyclerviewhelper.svg?style=social&label=Watch)](https://github.com/nisrulz/recyclerviewhelper) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/recyclerviewhelper)  
-[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz) 
+<div align="center">
+    <img src="img/walkthrough1.gif"/>
+</div>
 
-RecyclerViewHelper provides the most common functions around recycler view like Swipe
- to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not 
- selected, on-click listener for items.
-
-![Walkthrough](https://github.com/nisrulz/recyclerviewhelper/blob/develop/img/walkthrough1.gif)
-
-#Integration
+# Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
 // Required , so make sure your support libs are updated in the android sdk
@@ -27,7 +88,7 @@ implementation "com.android.support:appcompat-v7:{latest version}'
 implementation "com.android.support:recyclerview-v7:{latest version}'
 
 // RecyclerViewHelper
-compile 'com.github.nisrulz:recyclerviewhelper:{latest version}'
+implementation 'com.github.nisrulz:recyclerviewhelper:{latest version}'
 ```
 where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion)
 
@@ -38,17 +99,14 @@ where `{latest version}` corresponds to published version in [ ![Download](https
   ```gradle
   allprojects {
     repositories {
+      google()
       jcenter()
-
-      maven {
-        url 'https://maven.google.com'
-        // Alternative URL is 'https://dl.google.com/dl/android/maven2/'
-      }
     }
   }
   ```
 
-#Usage
+
+# Usage
 + Implement the `RHVAdapter` in your recycler view adapter and `RHVViewHolder` in your ItemViewHolder 
 ```java
 
@@ -154,40 +212,29 @@ where `{latest version}` corresponds to published version in [ ![Download](https
 
 --
 
+
 # Pull Requests
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
-  1. Match coding style (braces, spacing, etc.) This is best achieved using CMD+Option+L (Reformat code) on Mac (not sure for Windows) with Android Studio defaults.
+  1. Match coding style (braces, spacing, etc.) This is best achieved using CMD+Option+L (Reformat code) on Mac (not sure for Windows) with Android Studio defaults. The code style used in this project is from [Grandcentrix](https://github.com/grandcentrix/AndroidCodeStyle), so please use the same when editing this project.
   2. If its a feature, bugfix, or anything please only change code to what you specify.
   3. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
   4. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
-  5. Check for existing [issues](https://github.com/nisrulz/qreader/issues) first, before filing an issue.  
+  5. Check for existing [issues](https://github.com/nisrulz/recyclerviewhelper/issues) first, before filing an issue.  
   6. Have fun!
 
-### Created & Maintained By
-[Nishant Srivastava](https://github.com/nisrulz) ([@nisrulz](https://www.twitter.com/nisrulz))
+## Author & support
+This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/recyclerviewhelper/graphs/contributors).
 
 >Special Credits to Paul Burke and his [article](https://medium.com/@ipaulpro/drag-and-swipe-with-recyclerview-b9456d2b1aaf) which got me thinking
 >
 >This library contains a modified version of his implementations of ItemTouchHelper.
+<br/>
 
+> If you appreciate my work, consider buying me a cup of :coffee: to keep me recharged :metal:
+>  + [PayPal](https://www.paypal.me/nisrulz/5)
+>  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
+>
+> I love using my work and I'm available for contract work. Freelancing helps to maintain and keep [my open source projects](https://github.com/nisrulz/) up to date!
 
-> If you found this library helpful or you learned something from the source code and want to thank me, onsider [buying me a cup of](https://www.paypal.me/nisrulz/5) :coffee:
-
-
-License
-=======
-
-    Copyright 2016 Nishant Srivastava
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+<img src="http://forthebadge.com/images/badges/built-for-android.svg" />
 
