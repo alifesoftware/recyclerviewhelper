@@ -76,10 +76,6 @@
 <br/>
 <br/>
 
-<div align="center">
-    <img src="img/walkthrough1.gif"/>
-</div>
-
 # Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
@@ -104,7 +100,6 @@ where `{latest version}` corresponds to published version in [ ![Download](https
     }
   }
   ```
-
 
 # Usage
 + Implement the `RHVAdapter` in your recycler view adapter and `RHVViewHolder` in your ItemViewHolder 
@@ -210,8 +205,9 @@ where `{latest version}` corresponds to published version in [ ![Download](https
 
 ```
 
---
+### Demo
 
+![Walkthrough](img/walkthrough1.gif)
 
 # Pull Requests
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request. Here are some basic rules to follow to ensure timely addition of your request:
