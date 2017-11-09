@@ -1,7 +1,7 @@
 <div align="center">
   <img src="img/github_banner.png" />
 </div>
-<h1 align="center"><a href="https://twitter.com/intent/tweet?text=Checkout%20RecyclerViewHelper%3A%20Android%20lib%20with%20that%20gives%20powers%20to%20recyclerview%20%F0%9F%98%8E&url=https://github.com/nisrulz/recyclerviewhelper&via=nisrulz&hashtags=AndroidDev">
+<h1 align="center"><a href="https://twitter.com/intent/tweet?text=Checkout%20RecyclerViewHelper%3A%20Android%20library%20giving%20powers%20to%20RecyclerView%20%F0%9F%98%8E&url=https://github.com/nisrulz/recyclerviewhelper&via=nisrulz&hashtags=AndroidDev">
         <img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"/>
     </a></h1>
 
