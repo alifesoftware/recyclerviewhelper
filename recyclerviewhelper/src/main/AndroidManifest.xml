@@ -16,8 +16,7 @@
 
 <manifest package="github.nisrulz.recyclerviewhelper">
 
-  <application>
-  </application>
+    <application></application>
 
 
 </manifest>
