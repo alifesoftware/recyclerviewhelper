@@ -23,8 +23,8 @@ RecyclerViewHelper provides the most common functions around recycler view like 
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
 // Required , so make sure your support libs are updated in the android sdk
-compile "com.android.support:appcompat-v7:{latest version}'
-compile "com.android.support:recyclerview-v7:{latest version}'
+implementation "com.android.support:appcompat-v7:{latest version}'
+implementation "com.android.support:recyclerview-v7:{latest version}'
 
 // RecyclerViewHelper
 compile 'com.github.nisrulz:recyclerviewhelper:{latest version}'

@@ -39,13 +39,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
         }
 
         @Override
-        public void onItemSelected(int actionstate) {
-            System.out.println("Item is selected");
+        public void onItemClear() {
+            System.out.println("Item is unselected");
         }
 
         @Override
-        public void onItemClear() {
-            System.out.println("Item is unselected");
+        public void onItemSelected(int actionstate) {
+            System.out.println("Item is selected");
         }
     }
 
@@ -75,14 +75,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
     }
 
     @Override
-    public boolean onItemMove(int fromPosition, int toPosition) {
-        swap(fromPosition, toPosition);
-        return false;
+    public void onItemDismiss(int position, int direction) {
+        remove(position);
     }
 
     @Override
-    public void onItemDismiss(int position, int direction) {
-        remove(position);
+    public boolean onItemMove(int fromPosition, int toPosition) {
+        swap(fromPosition, toPosition);
+        return false;
     }
 
     private void remove(int position) {
