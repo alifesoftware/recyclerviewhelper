@@ -79,7 +79,7 @@
 # Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
-// Required , so make sure your support libs are updated in the android sdk
+// Required
 implementation "com.android.support:appcompat-v7:{latest version}'
 implementation "com.android.support:recyclerview-v7:{latest version}'
 
