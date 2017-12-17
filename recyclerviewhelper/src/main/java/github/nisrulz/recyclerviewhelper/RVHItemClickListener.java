@@ -75,12 +75,12 @@ public class RVHItemClickListener implements RecyclerView.OnItemTouchListener {
     }
 
     @Override
-    public void onTouchEvent(RecyclerView view, MotionEvent motionEvent) {
-        // Do nothing
+    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+        // Do nothings
     }
 
     @Override
-    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
-        // Do nothings
+    public void onTouchEvent(RecyclerView view, MotionEvent motionEvent) {
+        // Do nothing
     }
 }
