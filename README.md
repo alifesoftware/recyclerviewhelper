@@ -79,12 +79,13 @@
 # Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
+def supportLibVersion="{latest version}"
 // Required
-implementation "com.android.support:appcompat-v7:{latest version}'
-implementation "com.android.support:recyclerview-v7:{latest version}'
+implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+implementation "com.android.support:recyclerview-v7:${supportLibVersion}"
 
 // RecyclerViewHelper
-implementation 'com.github.nisrulz:recyclerviewhelper:{latest version}'
+implementation "com.github.nisrulz:recyclerviewhelper:${supportLibVersion}"
 ```
 where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion)
 
