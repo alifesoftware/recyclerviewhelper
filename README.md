@@ -216,8 +216,12 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
   2. If its a feature, bugfix, or anything please only change code to what you specify.
   3. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :)
   4. Pull requests _must_ be made against `develop` branch. Any other branch (unless specified by the maintainers) will get rejected.
-  5. Check for existing [issues](https://github.com/nisrulz/recyclerviewhelper/issues) first, before filing an issue.  
+  5. Check for existing [issues](https://github.com/nisrulz/recyclerviewhelper/issues) first, before filing an issue.
   6. Have fun!
+
+
+## License
+Licensed under the Apache License, Version 2.0, [click here for the full license](/LICENSE.txt).
 
 ## Author & support
 This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisrulz.github.io#nishant-srivastava) but hopefully developed and maintained by many others. See the [the list of contributors here](https://github.com/nisrulz/recyclerviewhelper/graphs/contributors).
@@ -231,7 +235,6 @@ This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisr
 >  + [PayPal](https://www.paypal.me/nisrulz/5)
 >  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
 >
-> I love using my work and I'm available for contract work. Freelancing helps to maintain and keep [my open source projects](https://github.com/nisrulz/) up to date!
+> Donation to the project is always welcome which helps to maintain and keep [my open source projects](https://github.com/nisrulz/) up to date!
 
 <img src="http://forthebadge.com/images/badges/built-for-android.svg" />
-

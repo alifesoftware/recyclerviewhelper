@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Nishant Srivastava
+ * Copyright (C) 2016 Nishant Srivastava
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,8 +16,8 @@
 
 ext {
     libConfig = [
-            versionCode     : 18,
-            versionName     : '27.1.0',
+            versionCode     : 19,
+            versionName     : '27.1.1',
             pomUrl          : 'https://github.com/nisrulz/recyclerviewhelper',
             githubRepo      : 'nisrulz/recyclerviewhelper',
 
