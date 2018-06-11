@@ -15,16 +15,18 @@
  */
 
 apply plugin: 'com.android.application'
+apply from: '../dependencies.gradle'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion versions.compileSdk
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
         applicationId "github.nisrulz.projectrecyclerviewhelper"
-        versionCode 1
-        versionName "1.0"
+        versionCode versions.appVersionCode
+        versionName versions.appVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -32,21 +34,36 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    lintOptions {
+        textOutput "stdout"
+        textReport true
+        checkAllWarnings true
+        warningsAsErrors true
+        showAll true
+        explainIssues true
+        abortOnError false
+        lintConfig file("$projectDir/lint.xml")
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // Testing
+    testImplementation unitTestLibs
+    androidTestImplementation androidTestsLibs
+
     // Card View
-    implementation "com.android.support:cardview-v7:${rootProject.ext.supportLibVersion}"
+    implementation supportDeps.cardView
 
     // Required
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
+    implementation "com.android.support:appcompat-v7:$versions.support"
+    implementation "com.android.support:recyclerview-v7:$versions.support"
 
     // RecyclerViewHelper
     // From Maven Repo
-    implementation "com.github.nisrulz:recyclerviewhelper:${rootProject.ext.supportLibVersion}"
+    // implementation "com.github.nisrulz:recyclerviewhelper:$versions.support"
     // From module
-    // implementation project(':recyclerviewhelper')
+    implementation project(':recyclerviewhelper')
 }
