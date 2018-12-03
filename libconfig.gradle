@@ -16,8 +16,8 @@
 
 ext {
     libConfig = [
-            versionCode     : 19,
-            versionName     : '27.1.1',
+            versionCode     : 20,
+            versionName     : 'x1.0.0',
             pomUrl          : 'https://github.com/nisrulz/recyclerviewhelper',
             githubRepo      : 'nisrulz/recyclerviewhelper',
 
