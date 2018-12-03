@@ -23,35 +23,37 @@ ext {
             targetSdk               : 28,
             compileSdk              : 28,
 
-            androidGradlePlugin     : '3.1.3',
+            androidGradlePlugin     : '3.2.1',
             gradleBintrayPlugin     : '1.8.0',
             androidMavenGradlePlugin: '2.1',
 
-            support                 : '27.1.1',
+            supportAppCompat        : '1.0.2',
+            support                 : '1.0.0',
+            supportRecyclerView     : '1.0.0',
 
             junit                   : '4.12',
-            espresso                : '3.0.2',
-            testRunner              : '1.0.2',
+            espresso                : '3.1.0',
+            testRunner              : '1.1.0',
     ]
 
     junit = [junit: "junit:junit:$versions.junit"]
 
     supportDeps = [
-            appcompatV7      : "com.android.support:appcompat-v7:$versions.support",
-            supportAnnotation: "com.android.support:support-annotations:$versions.support",
-            cardView         : "com.android.support:cardview-v7:$versions.support"
+            appcompatV7      : "androidx.appcompat:appcompat:$versions.support",
+            supportAnnotation: "androidx.annotation:annotation:$versions.support",
+            cardView         : "androidx.cardview:cardview:$versions.support"
     ]
 
     unitTest = [
-            supportAnnotation: "com.android.support:support-annotations:$versions.support",
+            supportAnnotation: "androidx.annotation:annotation:$versions.support",
     ] + junit
 
     androidTests = [
-            espressoCore   : "com.android.support.test.espresso:espresso-core:$versions.espresso",
-            espressoContrib: "com.android.support.test.espresso:espresso-contrib:$versions.espresso",
-            espressoIntents: "com.android.support.test.espresso:espresso-intents:$versions.espresso",
-            testRunner     : "com.android.support.test:runner:$versions.testRunner",
-            testRules      : "com.android.support.test:rules:$versions.testRunner",
+            espressoCore   : "androidx.test.espresso:espresso-core:$versions.espresso",
+            espressoContrib: "androidx.test.espresso:espresso-contrib:$versions.espresso",
+            espressoIntents: "androidx.test.espresso:espresso-intents:$versions.espresso",
+            testRunner     : "androidx.test:runner:$versions.testRunner",
+            testRules      : "androidx.test:rules:$versions.testRunner",
     ]
 
     gradlePlug = [

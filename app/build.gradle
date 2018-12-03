@@ -26,7 +26,7 @@ android {
         applicationId "github.nisrulz.projectrecyclerviewhelper"
         versionCode versions.appVersionCode
         versionName versions.appVersionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -58,12 +58,13 @@ dependencies {
     implementation supportDeps.cardView
 
     // Required
-    implementation "com.android.support:appcompat-v7:$versions.support"
-    implementation "com.android.support:recyclerview-v7:$versions.support"
+    implementation "androidx.appcompat:appcompat:$versions.supportAppCompat"
+    implementation "androidx.recyclerview:recyclerview:$versions.supportRecyclerView"
 
-    // RecyclerViewHelper
+    // ---------- RecyclerViewHelper ----------
     // From Maven Repo
-    // implementation "com.github.nisrulz:recyclerviewhelper:$versions.support"
+    // implementation "com.github.nisrulz:recyclerviewhelper:$versions.supportRecyclerView"
+
     // From module
     implementation project(':recyclerviewhelper')
 }

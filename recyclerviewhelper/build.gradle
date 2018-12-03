@@ -27,7 +27,7 @@ android {
         versionCode libConfig.versionCode
         versionName libConfig.versionName
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -56,8 +56,8 @@ dependencies {
     androidTestImplementation androidTestsLibs
 
     // CompileOnly deps
-    compileOnly "com.android.support:appcompat-v7:$versions.support"
-    compileOnly "com.android.support:recyclerview-v7:$versions.support"
+    compileOnly "androidx.appcompat:appcompat:$versions.supportAppCompat"
+    compileOnly "androidx.recyclerview:recyclerview:$versions.supportRecyclerView"
 }
 
 apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/v2/publish-config.gradle'
