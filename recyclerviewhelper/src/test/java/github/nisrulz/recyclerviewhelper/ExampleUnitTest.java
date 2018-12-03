@@ -16,8 +16,6 @@
 
 package github.nisrulz.recyclerviewhelper;
 
-import static org.junit.Assert.*;
-
 import org.junit.*;
 
 /**
@@ -27,6 +25,6 @@ public class ExampleUnitTest {
 
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        Assert.assertEquals(4, 2 + 2);
     }
 }
