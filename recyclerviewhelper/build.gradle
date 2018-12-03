@@ -56,7 +56,6 @@ dependencies {
     androidTestImplementation androidTestsLibs
 
     // CompileOnly deps
-    compileOnly "androidx.appcompat:appcompat:$versions.supportAppCompat"
     compileOnly "androidx.recyclerview:recyclerview:$versions.supportRecyclerView"
 }
 
