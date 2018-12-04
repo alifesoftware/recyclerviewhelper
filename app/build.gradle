@@ -57,13 +57,15 @@ dependencies {
     // Card View
     implementation supportDeps.cardView
 
-    // Required
+    // Support Appcompat
     implementation "androidx.appcompat:appcompat:$versions.supportAppCompat"
+
+    // Required
     implementation "androidx.recyclerview:recyclerview:$versions.supportRecyclerView"
 
     // ---------- RecyclerViewHelper ----------
     // From Maven Repo
-    // implementation "com.github.nisrulz:recyclerviewhelper:$versions.supportRecyclerView"
+    // implementation "com.github.nisrulz:recyclerviewhelper:x1.0.0"
 
     // From module
     implementation project(':recyclerviewhelper')
