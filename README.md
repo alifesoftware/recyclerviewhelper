@@ -76,18 +76,31 @@
 <br/>
 <br/>
 
+
+> Note: Development for pr-androidx version of this library has stopped. If you are looking for [pre-androidx version, then checkout this branch.](https://github.com/nisrulz/recyclerviewhelper/tree/archive/pre-androidx)
+
 # Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
 ```gradle
-def supportLibVersion="{latest version}"
+def recyclerViewVersion="{latest version}"
 // Required
-implementation "com.android.support:appcompat-v7:${supportLibVersion}"
-implementation "com.android.support:recyclerview-v7:${supportLibVersion}"
+implementation "androidx.recyclerview:recyclerview:${recyclerViewVersion}"
 
 // RecyclerViewHelper
-implementation "com.github.nisrulz:recyclerviewhelper:${supportLibVersion}"
+implementation "com.github.nisrulz:recyclerviewhelper:x${recyclerViewVersion}"
 ```
-where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion)
+where `{latest version}` corresponds to published version in [ ![Download](https://api.bintray.com/packages/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/images/download.svg) ](https://bintray.com/nisrulz/maven/com.github.nisrulz%3Arecyclerviewhelper/_latestVersion) without the prepended `x`.
+ This is done to distinguish between library using andoirdx vs pre-androidx.
+
+Usage Example:
+```gradle
+def recyclerViewVersion="1.0.0"
+// Required
+implementation "androidx.recyclerview:recyclerview:${recyclerViewVersion}"
+
+// RecyclerViewHelper
+implementation "com.github.nisrulz:recyclerviewhelper:x${recyclerViewVersion}"
+```
 
 > NOTE : The version here corresponds to the version of recyclerview dependency.
 
