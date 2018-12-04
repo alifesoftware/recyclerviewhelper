@@ -77,7 +77,8 @@
 <br/>
 
 
-> Note: Development for pr-androidx version of this library has stopped. If you are looking for [pre-androidx version, then checkout this branch.](https://github.com/nisrulz/recyclerviewhelper/tree/archive/pre-androidx)
+> Note: Development for pre-androidx version of this library has stopped. If you are looking for [pre-androidx version, then checkout this branch.](https://github.com/nisrulz/recyclerviewhelper/tree/archive/pre-androidx)
+> Library is compatible with AndroidX version only.
 
 # Integration
 RecyclerViewHelper is available in the Jcenter, so getting it as simple as adding it as a dependency
