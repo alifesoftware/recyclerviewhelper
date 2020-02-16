@@ -17,11 +17,12 @@
 package github.nisrulz.recyclerviewhelper;
 
 import android.content.Context;
-import android.view.GestureDetector.SimpleOnGestureListener;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.GestureDetector;
+import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener;
 
 /**
@@ -30,24 +31,9 @@ import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener;
 public class RVHItemClickListener implements OnItemTouchListener {
 
     /**
-     * The interface On item click listener.
-     */
-    public interface OnItemClickListener {
-
-        /**
-         * On item click.
-         *
-         * @param view     the view
-         * @param position the position
-         */
-        void onItemClick(View view, int position);
-    }
-
-    /**
      * The M gesture detector.
      */
     private final GestureDetector mGestureDetector;
-
     private final RVHItemClickListener.OnItemClickListener mListener;
 
     /**
@@ -84,5 +70,19 @@ public class RVHItemClickListener implements OnItemTouchListener {
     @Override
     public void onTouchEvent(final RecyclerView view, final MotionEvent motionEvent) {
         // Do nothing
+    }
+
+    /**
+     * The interface On item click listener.
+     */
+    public interface OnItemClickListener {
+
+        /**
+         * On item click.
+         *
+         * @param view     the view
+         * @param position the position
+         */
+        void onItemClick(View view, int position);
     }
 }

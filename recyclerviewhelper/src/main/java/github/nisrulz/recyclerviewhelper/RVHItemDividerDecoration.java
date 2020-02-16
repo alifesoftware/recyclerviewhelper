@@ -23,6 +23,7 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -64,7 +65,7 @@ public class RVHItemDividerDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void getItemOffsets(final Rect outRect, final View view, final RecyclerView parent,
-            final RecyclerView.State state) {
+                               final RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
 
         if (mOrientation == VERTICAL_LIST) {

@@ -14,18 +14,10 @@
  * limitations under the License.
  */
 
-package github.nisrulz.recyclerviewhelper;
-
-import org.junit.Assert;
-import org.junit.Test;
-
-/**
- * To work on unit tests, switch the Test Artifact in the Build Variants view.
- */
-public class ExampleUnitTest {
-
-    @Test
-    public void addition_isCorrect() throws Exception {
-        Assert.assertEquals(4, 2 + 2);
-    }
+object LibraryConfig {
+    const val libPomUrl = "https://github.com/nisrulz/recyclerviewhelper"
+    const val libGithubRepo = "nisrulz/recyclerviewhelper"
+    const val libModuleName = "recyclerviewhelper"
+    const val libModuleDesc = "RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items."
+    const val libBintrayName = "com.github.nisrulz:recyclerviewhelper"
 }

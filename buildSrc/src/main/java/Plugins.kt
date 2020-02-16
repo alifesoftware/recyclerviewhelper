@@ -14,18 +14,15 @@
  * limitations under the License.
  */
 
-package github.nisrulz.recyclerviewhelper;
+object Plugins {
+    // Plugins
+    const val android = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
 
-import org.junit.Assert;
-import org.junit.Test;
+    // Kotlin
+    const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 
-/**
- * To work on unit tests, switch the Test Artifact in the Build Variants view.
- */
-public class ExampleUnitTest {
 
-    @Test
-    public void addition_isCorrect() throws Exception {
-        Assert.assertEquals(4, 2 + 2);
-    }
+    // Publish
+    const val bintray = "com.jfrog.bintray.gradle:gradle-bintray-plugin:${Versions.bintrayPlugin}"
+    const val androidMaven = "com.github.dcendents:android-maven-gradle-plugin:${Versions.androidMavenPlugin}"
 }

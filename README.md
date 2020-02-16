@@ -95,7 +95,7 @@ where `{latest version}` corresponds to published version in [ ![Download](https
 
 Usage Example:
 ```gradle
-def recyclerViewVersion="1.0.0"
+def recyclerViewVersion="1.1.0"
 // Required
 implementation "androidx.recyclerview:recyclerview:${recyclerViewVersion}"
 
