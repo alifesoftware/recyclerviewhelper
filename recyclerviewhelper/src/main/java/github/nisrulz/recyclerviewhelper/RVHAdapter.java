@@ -23,7 +23,7 @@ public interface RVHAdapter {
 
     /**
      * Called when an item has been dismissed by a swipe.
-     *
+     * <p>
      * Implementations should call RecyclerView.Adapter notifyItemRemoved(int) after
      * adjusting the underlying data to reflect this removal.
      *
@@ -35,7 +35,7 @@ public interface RVHAdapter {
     /**
      * Called when an item has been dragged far enough to trigger a move. This is called every time
      * an item is shifted, and not at the end of a "drop" event.
-     *
+     * <p>
      * Implementations should call RecyclerView.Adapter notifyItemMoved(int, int) after
      * adjusting the underlying data to reflect this move.
      *

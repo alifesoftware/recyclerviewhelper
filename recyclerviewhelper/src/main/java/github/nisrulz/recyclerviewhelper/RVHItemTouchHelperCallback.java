@@ -17,6 +17,7 @@
 package github.nisrulz.recyclerviewhelper;
 
 import android.graphics.Canvas;
+
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,7 +43,7 @@ public class RVHItemTouchHelperCallback extends ItemTouchHelper.Callback {
      * @param isItemViewSwipeEnabledRight the is item view swipe enabled right
      */
     public RVHItemTouchHelperCallback(final RVHAdapter adapter, final boolean isLongPressDragEnabled,
-            final boolean isItemViewSwipeEnabledLeft, final boolean isItemViewSwipeEnabledRight) {
+                                      final boolean isItemViewSwipeEnabledLeft, final boolean isItemViewSwipeEnabledRight) {
         this.mAdapter = adapter;
         this.isItemViewSwipeEnabledLeft = isItemViewSwipeEnabledLeft;
         this.isItemViewSwipeEnabledRight = isItemViewSwipeEnabledRight;
@@ -51,7 +52,7 @@ public class RVHItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public boolean canDropOver(final RecyclerView recyclerView, final RecyclerView.ViewHolder current,
-            final RecyclerView.ViewHolder target) {
+                               final RecyclerView.ViewHolder target) {
         return current.getItemViewType() == target.getItemViewType();
     }
 
@@ -93,7 +94,7 @@ public class RVHItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public void onChildDraw(final Canvas c, final RecyclerView recyclerView, final RecyclerView.ViewHolder viewHolder,
-            final float dX, final float dY, final int actionState, final boolean isCurrentlyActive) {
+                            final float dX, final float dY, final int actionState, final boolean isCurrentlyActive) {
         if (ItemTouchHelper.ACTION_STATE_SWIPE == actionState) {
             // Fade out the view as it is swiped out of the parent's bounds
             viewHolder.itemView.setTranslationX(dX);
@@ -104,7 +105,7 @@ public class RVHItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public boolean onMove(final RecyclerView recyclerView, final RecyclerView.ViewHolder source,
-            final RecyclerView.ViewHolder target) {
+                          final RecyclerView.ViewHolder target) {
         // Notify the adapter of the move
         this.mAdapter.onItemMove(source.getAdapterPosition(), target.getAdapterPosition());
         return true;

@@ -16,38 +16,21 @@
 
 package github.nisrulz.projectrecyclerviewhelper;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import github.nisrulz.recyclerviewhelper.RVHAdapter;
-import github.nisrulz.recyclerviewhelper.RVHViewHolder;
+
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.Collections;
 import java.util.List;
 
+import github.nisrulz.recyclerviewhelper.RVHAdapter;
+import github.nisrulz.recyclerviewhelper.RVHViewHolder;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
         implements RVHAdapter {
-
-    public class ItemViewHolder extends RecyclerView.ViewHolder implements RVHViewHolder {
-
-        final TextView txt;
-
-        public ItemViewHolder(View itemView) {
-            super(itemView);
-            txt = itemView.findViewById(R.id.txt);
-        }
-
-        @Override
-        public void onItemClear() {
-            System.out.println("Item is unselected");
-        }
-
-        @Override
-        public void onItemSelected(int actionstate) {
-            System.out.println("Item is selected");
-        }
-    }
 
     private final List<String> dataList;
 
@@ -93,5 +76,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemViewHolder>
     private void swap(int firstPosition, int secondPosition) {
         Collections.swap(dataList, firstPosition, secondPosition);
         notifyItemMoved(firstPosition, secondPosition);
+    }
+
+    public class ItemViewHolder extends RecyclerView.ViewHolder implements RVHViewHolder {
+
+        final TextView txt;
+
+        public ItemViewHolder(View itemView) {
+            super(itemView);
+            txt = itemView.findViewById(R.id.txt);
+        }
+
+        @Override
+        public void onItemClear() {
+            System.out.println("Item is unselected");
+        }
+
+        @Override
+        public void onItemSelected(int actionstate) {
+            System.out.println("Item is selected");
+        }
     }
 }
