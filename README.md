@@ -245,10 +245,6 @@ This project was created by [Nishant Srivastava](https://github.com/nisrulz/nisr
 >This library contains a modified version of his implementations of ItemTouchHelper.
 <br/>
 
-> If you appreciate my work, consider buying me a cup of :coffee: to keep me recharged :metal:
->  + [PayPal](https://www.paypal.me/nisrulz/5usd)
->  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
->
-> Donation to the project is always welcome which helps to maintain and keep [my open source projects](https://github.com/nisrulz/) up to date!
+If you appreciate my work, consider [buying me](https://www.paypal.me/nisrulz/5usd) a cup of :coffee: to keep me recharged :metal: [[PayPal](https://www.paypal.me/nisrulz/5usd)]
 
 <img src="http://forthebadge.com/images/badges/built-for-android.svg" />
