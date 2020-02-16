@@ -14,16 +14,23 @@
  * limitations under the License.
  */
 
+android {
+    defaultConfig {
+        versionCode Versions.libraryCode
+        versionName Versions.libraryName
+    }
+}
+
 ext {
     libConfig = [
-            versionCode     : 20,
-            versionName     : 'x1.0.0',
-            pomUrl          : 'https://github.com/nisrulz/recyclerviewhelper',
-            githubRepo      : 'nisrulz/recyclerviewhelper',
+            versionCode     : Versions.libraryCode,
+            versionName     : Versions.libraryName,
+            pomUrl          : LibraryConfig.libPomUrl,
+            githubRepo      : LibraryConfig.libGithubRepo,
 
-            moduleName      : 'recyclerviewhelper',
-            moduleDesc      : 'RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.',
-            bintrayName     : 'com.github.nisrulz:recyclerviewhelper',
+            moduleName      : LibraryConfig.libModuleName,
+            moduleDesc      : LibraryConfig.libModuleDesc,
+            bintrayName     : LibraryConfig.libBintrayName,
 
             publishedGroupId: GROUP,
             developerId     : POM_DEVELOPER_ID,
@@ -39,3 +46,18 @@ ext {
             apikey: BINTRAY_APIKEY
     ]
 }
+
+ext {
+    // Library Info
+    libVersionCode = Versions.libraryCode
+    libVersionName = Versions.libraryName
+
+    libPomUrl = LibraryConfig.libPomUrl
+    libGithubRepo = LibraryConfig.libGithubRepo
+
+    libModuleName = LibraryConfig.libModuleName
+    libModuleDesc = LibraryConfig.libModuleDesc
+    libBintrayName = LibraryConfig.libBintrayName
+}
+
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/v2/publish-config.gradle'

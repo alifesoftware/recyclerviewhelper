@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.library'
-
-// Configs
-apply from: "$rootProject.projectDir/configs/common.gradle"
-apply from: "$rootProject.projectDir/configs/library.gradle"
-
-dependencies {
-    compileOnly Dependencies.recyclerView
+object LibraryConfig {
+    const val libPomUrl = "https://github.com/nisrulz/recyclerviewhelper"
+    const val libGithubRepo = "nisrulz/recyclerviewhelper"
+    const val libModuleName = "recyclerviewhelper"
+    const val libModuleDesc = "RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items."
+    const val libBintrayName = "com.github.nisrulz:recyclerviewhelper"
 }

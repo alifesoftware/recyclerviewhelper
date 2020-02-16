@@ -22,14 +22,16 @@ object Versions {
     const val targetSDK = compileSDK
 
     // Plugins
-    const val androidGradlePlugin = "3.5.0"
+    const val androidGradlePlugin = "3.6.0-rc03"
     const val bintrayPlugin = "1.8.4"
     const val androidMavenPlugin = "2.1"
 
     // Dependencies
-    const val kotlin = "1.3.50"
-    const val support = "1.0.0"
-    const val appCompat = "1.0.2"
+    const val kotlin = "1.3.61"
+    const val cardview = "1.0.0"
+    const val annotation = "1.1.0"
+    const val appCompat = "1.1.0"
+    const val recyclerView = "1.1.0"
 
     // Testing
     const val junit = "4.12"
@@ -45,6 +47,6 @@ object Versions {
     const val appName = "1.0.0"
 
     // Library
-    const val libraryCode = 17
-    const val libraryName = "2.0.0"
+    const val libraryCode = 21
+    const val libraryName = "x1.1.0"
 }

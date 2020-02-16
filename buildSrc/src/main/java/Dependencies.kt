@@ -30,5 +30,7 @@ object Dependencies {
 
     // Support Library
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
-    const val supportCore = "androidx.core:core:${Versions.support}"
+    const val cardview = "androidx.cardview:cardview:${Versions.cardview}"
+    const val annotation = "androidx.annotation:annotation:${Versions.annotation}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
 }
